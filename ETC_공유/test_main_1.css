@@ -1,0 +1,155 @@
+body {
+    margin: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 사이드바 스타일 */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #00D7FF;
+    overflow-x: hidden;
+    transition: 0.5s ease-in-out;
+    padding-top: 60px;
+}
+
+.sidenav a,h1 {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.2s ease-in-out;
+}
+
+.sidenav h1 {
+    font-size: 40px;
+}
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #000;
+}
+
+/* 미디어쿼리 적용 */
+@media screen and (max-height:450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+#contentmain {
+    position: relative;
+    float: right;
+    border-left: 1px solid #00D7FF;
+    height: 1000px;
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 25px;
+}
+
+div.polaroid {
+    position: relative;
+    float: left;
+    width: 25%;
+    height: 40%;
+    background-color: white;
+    margin: 25px;
+    overflow: hidden;
+}
+
+div.polaroid:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.container {
+    text-align: center
+}
+
+#contentmain > .polaroid img {
+    border: 0px solid #ddd;
+    height: 85%;
+}
+
+#slidePic {
+    border: 1px solid #00D7FF;
+    position: relative;
+    width: 100%;
+    height: 40%;
+    margin: 25px;
+    overflow: hidden;
+}
+
+
+.openBtn {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    float: left;
+    width: 5%;
+    height: 10%;
+    z-index: 100;
+    margin-right: 15px;
+}
+
+.menu-icon {
+    position: relative;
+    max-width: 5.5rem;
+    max-height: 4.125rem;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.menu-icon path {
+    stroke: #363636;
+    stroke-width: 5;
+    stroke-linecap: round;
+    transition: all 250ms ease-in-out;
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+    will-change: transform, opacity;
+}
+
+.menu-button:hover path,
+.menu-button:focus path,
+.menu-button:active path {
+    stroke: #d00251;
+}
+
+.menu-icon.is-active path:nth-child(1) {
+    opacity: 0;
+}
+
+.menu-icon.is-active path:nth-child(4) {
+    opacity: 0;
+}
+
+.menu-icon.is-active path:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.menu-icon.is-active path:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+#user{
+    position: relative;
+    float: right;
+    width: 500px;
+    border: 1px solid black;
+}
+
+#user div{
+    position: relative;
+    float: right;
+    margin-left: 25px;
+}
