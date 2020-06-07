@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+li  a:link {text-decoration: none;}
+/*text-decoration: none;-> 밑줄 없애기*/
+li a{color:#5D5D5D;}
+div{padding:10px 40px 10px 40px;}
+
+ 
+/**/
+/*제일 상단 one*/
+#divTopMenu{float:right;}
+#liTop{
+	display:inline;  
+  padding:0px 5px 0px 5px;}
+
+
+/**/
+/*베너 부분 two*/
+#h1{float:left;}
+#title{
+	color:#22741C; 
+	font-size:65px;}
+#twoMenuBox{
+	float:right; 
+  padding:0px 0px 0px 0px;}
+#liMenu{
+	display:inline;  
+	padding:0px 10px 0px 10px;}
+
+
+/**/
+/*카테고리 부분three*/
+.liCategory {
+    background-color: #2F9D27;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;}
+    
+.categoryBox { 
+    position: relative; 
+    display: inline-block;
+    padding:10px 10px 10px 0px;}
+    
+.th {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 130px;
+    border:1px solid #2F9D27;
+    z-index: 1;}
+    
+.th a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;}
+    
+.th a:hover {color: #2F9D27;}
+.categoryBox:hover .th {display: block;}
+.categoryBox:hover .liCategory {background-color: #3e8e41;}
+#three{border-bottom:2px solid #22741C; padding:20px 10px 0px 0px;}
+#cg{ 
+	display: inline-block; 
+  padding:10px 10px 10px 10px; 
+  font-size:20px;}
+#liCategory{
+	display:inline; 
+	padding:0px 25px 0px 0px; 
+	color:#22741C; }
+
+/**/
+/*광고 부분 four*/
+img{
+	display: block; 
+	margin: 0px auto; 
+	width:700px;}
+/*display: block; margin: 0px auto; -> 이미지 중앙 정렬*/
+
+
+/**/
+/*제일 하단 five*/
+#BottomMenuBox{border-top:2px solid #22741C;}
+#liBottom{
+	display:inline; 
+	padding:0px 5px 0px 5px;}
+

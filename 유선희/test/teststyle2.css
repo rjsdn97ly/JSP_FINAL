@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+li  a:link {text-decoration: none;}
+li a{color:#5D5D5D; }
+
+/**/
+/*제일 상단 one*/
+#divTopMenu{float:right; padding:0px 10px 0px 10px;}
+#liTop{display:inline;  padding:0px 5px 0px 5px;}
+
+
+/**/
+/*베너 부분 two*/
+#two{padding:10px 40px 35px 40px;}
+#h1{float:left;}
+#title{color:#22741C; font-size:65px;}
+#twoMenuBox{float:right; padding:0px 0px 0px 0px;}
+#liMenu{display:inline;  padding:0px 10px 0px 10px;}
+
+
+/**/
+/*카테고리 부분three*/
+.liCategory {
+    background-color: #2F9D27;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    width:100%;
+    cursor: pointer;}
+    
+.categoryBox { 
+	  list-style-type:none;
+    position: relative; 
+    display:block;
+    width:100%;
+    padding:10px 40px 10px 0px;}
+    
+.th {
+    display: none;
+    position:  fixed;
+    top:229px;
+    left:147px;
+    min-width: 220px;
+    /*top, left로 드롭메뉴 위치 지정*/
+    background-color: white;
+    border:1px solid #2F9D27;
+    }
+    
+.th a {
+	  font-size: 15px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;}
+    
+.th a:hover {color: #2F9D27;}
+.categoryBox:hover .th {display: block;}
+.categoryBox:hover .liCategory {background-color: #3e8e41;}
+#cg{ 
+	hegith:150px;
+	list-style-type:none;
+	float:left;
+	color: white;
+	display:inline;
+  padding:10px 28px 290px 17px; 
+  font-size:20px;
+  background-color:rgba( 34, 116, 28, 40% );}
+#threeFour{padding:0px 0px 30px 0px; border-top:2px solid #22741C;}
+#liCategory{padding:10px 0px 20px 15px;}
+.categoryBox{width:140px;  padding:0px 0px 0px 0px; font-size:20px;  }
+/*background-color:rgba( 34, 116, 28, 40% )-> 배경색만 투명도 주기*/
+
+/**/
+/*광고 부분 four*/
+#imgBox{padding:20px 40px 0px 40px;}
+img{display: block; margin: 0px auto; width:700px;}
+/*display: block; margin: 0px auto; -> 이미지 중앙 정렬*/
+
+
+/**/
+/*제일 하단 five*/
+#BottomMenuBox{border-top:2px solid #22741C; padding:0px 10px 0px 10px;}
+#liBottom{display:inline; padding:0px 5px 0px 5px;}
