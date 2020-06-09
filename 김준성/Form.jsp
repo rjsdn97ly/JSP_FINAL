@@ -28,11 +28,6 @@
 	margin: auto;
 }
 
-.big-center {
-	display: inline-block;
-	margin: 40px;
-}
-
 .table-line-img {
 	font-size: 14px;
 	margin: 0;
@@ -67,7 +62,7 @@ table.Revise-table td {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	z-index: 1000;
+	z-index: auto;
 	float: left;
 	min-width: 10rem;
 	padding: 0.5rem 0;
@@ -102,64 +97,54 @@ table.Revise-table td {
 			</div>
 		</div>
 
-		<div class="container big-center">
-			<nav class="leftmenu">
-				<div class="Revise-menu">
-					<h6 class="dropdown-header">My Menu</h6>
-					<a class="dropdown-item" href="#">주문 내역</a>
-					<a class="dropdown-item" href="#">상품 후기</a>
-					<a class="dropdown-item" href="#">최근 본 상품</a>
-					<a class="dropdown-item" href="#">적립금</a>
-					<div class="dropdown-divider"></div>
-					<a class="dropdown-item" href="#">1:1 문의</a>
-					<a class="dropdown-item" href="#">회원 탈퇴</a>
-				</div>
-			</nav>
-			<section class="ReviseMain">
-				<header>
-					<h1>기본 회원정보</h1>
-				</header>
-				<table class="Revise-table">
-					<tbody>
-						<tr class="table-line-img">
-							<th class=>사진</th>
-							<td>
-								<div>
-									<div>img</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-						</tr>
-						<tr>
-							<th>아이디</th>
-							<td><strong>rkaak6445</strong></td>
-						</tr>
-						<tr>
-							<th>비밀번호</th>
-							<td><strong>*******</strong></td>
-						</tr>
-						<tr>
-							<th>닉네임</th>
-							<td><strong>GreenPig</strong></td>
-						</tr>
-						<tr>
-							<th>이메일</th>
-							<td><strong>rkaak6445@naver.com</strong></td>
-						</tr>
-						<tr>
-							<th>휴대전화</th>
-							<td><strong>000-0000-0000</strong></td>
-						</tr>
-						<tr>
-							<th>아이디</th>
-							<td><strong>rkaak6445</strong></td>
-						</tr>
-
-					</tbody>
-				</table>
-			</section>
-		</div>
+			<div class="container">
+				<nav class="leftmenu">
+					<div class="Revise-menu">
+						<h6 class="dropdown-header">My Menu</h6>
+						<a class="dropdown-item" href="#">주문 내역</a> <a
+							class="dropdown-item" href="#">상품 후기</a> <a class="dropdown-item"
+							href="#">최근 본 상품</a> <a class="dropdown-item" href="#">적립금</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">1:1 문의</a> <a
+							class="dropdown-item" href="#">회원 탈퇴</a>
+					</div>
+				</nav>
+				<section class="ReviseMain">
+					<header>
+						<h1>주문 내역</h1>
+					</header>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th scope="col">#</th>
+								<th scope="col">First</th>
+								<th scope="col">Last</th>
+								<th scope="col">Handle</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">1</th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td>@mdo</td>
+							</tr>
+							<tr>
+								<th scope="row">2</th>
+								<td>Jacob</td>
+								<td>Thornton</td>
+								<td>@fat</td>
+							</tr>
+							<tr>
+								<th scope="row">3</th>
+								<td>Larry</td>
+								<td>the Bird</td>
+								<td>@twitter</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</div>
 		<!-- /container -->
 
 	</main>
