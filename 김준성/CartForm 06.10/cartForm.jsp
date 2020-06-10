@@ -207,11 +207,11 @@ table.Revise-table {
 				<div class="text-left">
 					<a style="width: 150px;" type="button"
 						class="btn btn-md btn-outline-dark">주문/결제</a>
-				
+
 					<a style="width: 150px;" type="button"
 						class="btn btn-md btn-outline-dark">전체 주문</a>
 				</div>
-				
+
 				<div class="ul-li">
 					<ul>
 						<li>구매 가능 수량이 1개로 제한된 상품은 주문 취소 시, 24시간 내 가상계좌 재주문이 불가합니다.</li>
