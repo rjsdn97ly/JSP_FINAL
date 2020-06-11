@@ -11,6 +11,8 @@
 <title>topBar</title>
 
 <script type="text/javascript">
+
+	
 	
 </script>
 
@@ -19,7 +21,7 @@
 
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="color: white;">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: #96DFD8;: white;">
 		<a class="navbar-brand" href="#">
 			<h1>Green Tea</h1>
 		</a>
@@ -38,6 +40,9 @@
 				<li class="nav-item active">
 					<a class="nav-link" href="#">Link</a>
 				</li>
+				
+				<!-- ------------------------------------------- dropdown ------------------------------------------------ -->
+				
 				<li class="nav-item dropdown active">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -46,17 +51,26 @@
 						<a class="dropdown-item" href="#">회원가입</a>
 					</div>
 				</li>
+				
+				<!-- ------------------------------------------ /dropdown ------------------------------------------------ -->
+				
 				<li class="nav-item">
 					<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
 				</li>
 			</ul>
+			
+			<!-- ------------------------------------------- search ------------------------------------------------ -->
+			
 			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"  style="width: 300px;">
+				<button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
 			</form>
+			
+			<!-- ------------------------------------------ /search ------------------------------------------------ -->
+			
 			<ul class="navbar-nav px-5">
 				<li class="nav-item dropdown active">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 메뉴 </a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="#">로그인</a>
 						<div class="dropdown-divider"></div>
