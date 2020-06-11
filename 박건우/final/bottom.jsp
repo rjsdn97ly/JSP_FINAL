@@ -20,7 +20,7 @@
 
 		<div class="container bottom">
 			<span class="text-muted">
-				<a href="#">Go TOP</a>
+				<a class="btn btn-sm btn-outline-light my-auto" href="#" role="button">Go TOP</a>
 			</span>
 		</div>
 

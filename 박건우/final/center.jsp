@@ -37,7 +37,6 @@
 </head>
 <body>
 
-
 	<!-- Main jumbotron for a primary marketing message or call to action -->
 	<div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -51,10 +50,10 @@
 						<rect width="100%" height="100%" fill="#96DFD8"></rect></svg>
 				<div class="container caption">
 					<div class="carousel-caption text-left">
-						<h1>Example headline.</h1>
-						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<h1>회원 아이디(DB) + "적립금 현황"</h1>
+						<p>회원 적립금(DB)</p>
 						<p>
-							<a class="btn btn-lg btn-outline-light" href="#" role="button">Sign up today</a>
+							<a class="btn btn-lg btn-outline-light" href="#" role="button">내역 확인하기</a>
 						</p>
 					</div>
 				</div>
@@ -64,10 +63,10 @@
 						<rect width="100%" height="100%" fill="#96DFD8"></rect></svg>
 				<div class="container">
 					<div class="carousel-caption">
-						<h1>Another example headline.</h1>
-						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<h1>회원 아이디(DB)</h1>
+						<p>환영합니다!</p>
 						<p>
-							<a class="btn btn-lg btn-outline-light" href="#" role="button">Learn more</a>
+							<a class="btn btn-lg btn-outline-light" href="#" role="button">개인정보 수정</a>
 						</p>
 					</div>
 				</div>
@@ -77,10 +76,10 @@
 						<rect width="100%" height="100%" fill="#96DFD8"></rect></svg>
 				<div class="container">
 					<div class="carousel-caption text-right">
-						<h1>One more for good measure.</h1>
-						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+						<h1>주문 내역 조회</h1>
+						<p>"최근 주문 목록" + 주문 내역(DB)</p>
 						<p>
-							<a class="btn btn-lg btn-outline-light" href="#" role="button">Browse gallery</a>
+							<a class="btn btn-lg btn-outline-light" href="#" role="button">주문 내역 상세보기</a>
 						</p>
 					</div>
 				</div>
@@ -97,29 +96,29 @@
 		<!-- Example row of columns -->
 		<div class="row">
 			<div class="col-md-3">
-				<h2>메뉴1</h2>
-				<p>설명</p>
+				<h2>개인정보 수정</h2>
+				<p>수정</p>
 				<p>
 					<a class="btn btn-sm btn-outline-dark" href="#" role="button">View details »</a>
 				</p>
 			</div>
 			<div class="col-md-3">
-				<h2>메뉴2</h2>
-				<p>설명</p>
+				<h2>주문내역</h2>
+				<p>내역</p>
 				<p>
 					<a class="btn btn-sm btn-outline-dark" href="#" role="button">View details »</a>
 				</p>
 			</div>
 			<div class="col-md-3">
-				<h2>메뉴3</h2>
-				<p>설명</p>
+				<h2>장바구니</h2>
+				<p>장바구니</p>
 				<p>
 					<a class="btn btn-sm btn-outline-dark" href="#" role="button">View details »</a>
 				</p>
 			</div>
 			<div class="col-md-3">
-				<h2>메뉴4</h2>
-				<p>설명</p>
+				<h2>최근 본 상품</h2>
+				<p>상품</p>
 				<p>
 					<a class="btn btn-sm btn-outline-dark" href="#" role="button">View details »</a>
 				</p>
