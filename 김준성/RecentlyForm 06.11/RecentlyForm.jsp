@@ -193,7 +193,7 @@ margin-top: 30px;}
 										the card title and make up the bulk of the card's content.</p>
 									<a href="#" class="btn btn-primary">Go somewhere</a>
 								</div></li>
-						
+
 					</ul>
 					<ul class="list-group list-form">
 						<li class="li-product card">
@@ -228,10 +228,10 @@ margin-top: 30px;}
 										the card title and make up the bulk of the card's content.</p>
 									<a href="#" class="btn btn-primary">Go somewhere</a>
 								</div></li>
-						
+
 					</ul>
 				</div>
-			
+
 			</div>
 		</div>
 	</div>
