@@ -1,12 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="javax.sql.DataSource"%>
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="javax.naming.Context"%><%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+  //1. Context 객체 생성
+  Context initCtx = new InitialContext();
+
+  //2. DataSource 객체 생성
+  DataSource ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/ysh");
+  
+  //3. CP에서 connection 가져오기
+  Connection con = ds.getConnection();
+  
+  String sql = "SELECT * FROM JSPMEMBER";
+  Statement st = con.createStatement();
+  
+  //4. 반환 객체
+  ResultSet rs = st.executeQuery(sql);
+%>
 <!DOCTYPE html>
 <html>
 <head>
  <meta charset="UTF-8">
  <title>Insert title here</title>
 <style>
-
 .side-dropdown-menu {
 	/* position: absolute; */
 	height: 700px;
@@ -29,19 +49,17 @@
 	max-width: 0%;
 	!
 	important;
-
 }
 .dropdown-item{
 	padding : 10px 24px 10px 24px;
 }
 .Reversive-Form {
-	width: 900px;
+	width: 1300px;
 	left: 200px;
 	top: 130px;
 	position: absolute;
 	max-width: 100%;
 }
-
  </style>
 </head>
 <body>
@@ -51,7 +69,7 @@
 				<div class="side-dropdown-menu">
 				
 					<a class="dropdown-item" href="#">회원관리</a> 
-					<a class="dropdown-item" href="#">재고관리</a> 
+					<a class="dropdown-item" href="stockmain.jsp">재고관리</a> 
 					<a class="dropdown-item" href="#">상품등록</a> 
 					<a class="dropdown-item" href="#">게시판관리</a>
 					<a class="dropdown-item" href="#">공지작성</a>
@@ -64,9 +82,9 @@
 					<h1 class="text-center">회원관리</h1><br>
 					<thead>
 						<tr>
-						  <th scope="col">이름</th>
 							<th scope="col">아이디</th>
 							<th scope="col">비밀번호</th>
+							<th scope="col">이름</th>
 							<th scope="col">주소</th>
 							<th scope="col">닉네임</th>
 							<th scope="col">이메일</th>
@@ -75,42 +93,36 @@
 							<th scope="col"></th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">회원1</th>
-							<td>fsdfs</td>
-							<td>1234</td>
-							<td>부산 </td>
-							<td>fdsf </td>
-							<td>fdsf@naver.com</td>
-							<td>010-0000-0000 </td>
+					 <%
+ //5.결과 집합처리
+ while(rs.next()){
+	 String id = rs.getString("ID");
+	 String pwd = rs.getString("PWD");
+	 String name = rs.getString("NAME");
+	 String address = rs.getString("ADDRESS");
+	 String nickname = rs.getString("NICKNAME");
+	 String email = rs.getString("EMAIL");
+	 String phone = rs.getString("PHONE");
+ %>
+
+ <tr>
+ <td><%=id %></td>
+							<td><%=pwd %></td>
+							<td><%=name %></td>
+							<td><%=address %> </td>
+							<td><%=nickname %> </td>
+							<td><%=email %></td>
+							<td><%=phone %></td>
 							<td><a type="button" class="btn btn-sm btn-outline-dark">삭제</a></td>
-						<td><a type="button" hred ="" class="btn btn-sm btn-outline-dark">편집</a></td>
-						</tr>
-						<tr>
-							<th scope="row">회원1</th>
-							<td>fsdfs</td>
-							<td>1234</td>
-							<td>부산 </td>
-							<td>fdsf </td>
-							<td>fdsf@naver.com</td>
-							<td>010-0000-0000 </td>
-							<td><a type="button" class="btn btn-sm btn-outline-dark">삭제</a></td>
-						<td><a type="button" hred ="" class="btn btn-sm btn-outline-dark">편집</a></td>
-						</tr>
-						<tr>
-							<th scope="row">회원1</th>
-							<td>fsdfs</td>
-							<td>1234</td>
-							<td>부산 </td>
-							<td>fdsf </td>
-							<td>fdsf@naver.com</td>
-							<td>010-0000-0000 </td>
-							<td><a type="button" class="btn btn-sm btn-outline-dark">삭제</a></td>
-						<td><a type="button" hred ="" class="btn btn-sm btn-outline-dark">편집</a></td>
-						</tr>
-						
-						</tbody>
+						<td><a type="button" href ="" class="btn btn-sm btn-outline-dark">편집</a></td>
+ </tr>
+
+ <% } 
+ //6. 객체 연결 해제
+ rs.close();
+ st.close();
+ con.close();
+ %>
 						</table>
 						</div>
 					
