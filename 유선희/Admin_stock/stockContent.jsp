@@ -1,5 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="javax.sql.DataSource"%>
+<%@page import="javax.naming.InitialContext"%>
+<%@page import="javax.naming.Context"%><%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+  //1. Context 객체 생성
+  Context initCtx = new InitialContext();
+
+  //2. DataSource 객체 생성
+  DataSource ds = (DataSource)initCtx.lookup("java:comp/env/jdbc/ysh");
+  
+  //3. CP에서 connection 가져오기
+  Connection con = ds.getConnection();
+  
+  String sql = "SELECT * FROM PRODUCT";
+  Statement st = con.createStatement();
+  
+  //4. 반환 객체
+  ResultSet rs = st.executeQuery(sql);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +56,7 @@
 	padding : 10px 24px 10px 24px;
 }
 .Reversive-Form {
-	width: 900px;
+	width: 1300px;
 	left: 200px;
 	top: 130px;
 	position: absolute;
@@ -50,7 +71,7 @@
 			<div class="col-md-3 col-md-pull-9 left-Menu-hi">
 				<div class="side-dropdown-menu">
 				
-					<a class="dropdown-item" href="#">회원관리</a> 
+					<a class="dropdown-item" href="Admin_user/usermain.jsp">회원관리</a> 
 					<a class="dropdown-item" href="#">재고관리</a> 
 					<a class="dropdown-item" href="#">상품등록</a> 
 					<a class="dropdown-item" href="#">게시판관리</a>
@@ -65,43 +86,46 @@
 					<thead>
 						<tr>
 							<th scope="col">상품ID</th>
+							<th scope="col">분류명</th>
 							<th scope="col">상품이미지</th>
 							<th scope="col">상품명</th>
 							<th scope="col">가격</th>
 							<th scope="col">남은재고수량</th>
+							<th scope="col">상품설명</th>
 							<th scope="col"></th>
 							<th scope="col"></th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">S01</th>
-							<td><img src="..." alt="..." class="img-circle"></td>
-							<td>미프 올인원 스킨</td>
-							<td>60,000</td>
-							<td>120</td>
+										 <%
+ //5.결과 집합처리
+ while(rs.next()){
+	 String productid = rs.getString("PRODUCTID");
+	 String category = rs.getString("CATEGORY");
+	 String img = rs.getString("IMG");
+	 String name = rs.getString("NAME");
+	 String price = rs.getString("PRICE");
+	 String stock = rs.getString("STOCK");
+	 String explain = rs.getString("EXPLAIN");
+ %>
+
+ <tr>
+ <td><%=productid %></td>
+							<td><%=category %></td>
+							<td><%=img %></td>
+							<td><%=name %> </td>
+							<td><%=price %> </td>
+							<td><%=stock %></td>
+							<td><%=explain %></td>
 							<td><a type="button" class="btn btn-sm btn-outline-dark">삭제</a></td>
 						<td><a type="button" hred ="" class="btn btn-sm btn-outline-dark">편집</a></td>
-						</tr>
-						<tr>
-							<th scope="row">S01</th>
-							<td><img src="..." alt="..." class="img-circle"></td>
-							<td>미프 올인원 스킨</td>
-							<td>60,000</td>
-							<td>120</td>
-							<td><a type="button" class="btn btn-sm btn-outline-dark">삭제</a></td>
-						<td><a type="button" hred ="" class="btn btn-sm btn-outline-dark">편집</a></td>
-						</tr>
-						<tr>
-							<th scope="row">S01</th>
-							<td><img src="..." alt="..." class="img-circle"></td>
-							<td>미프 올인원 스킨</td>
-							<td>60,000</td>
-							<td>120</td>
-							<td><a type="button" class="btn btn-sm btn-outline-dark">삭제</a></td>
-						<td><a type="button" hred ="" class="btn btn-sm btn-outline-dark">편집</a></td>
-						</tr>
-						</tbody>
+ </tr>
+
+ <% } 
+ //6. 객체 연결 해제
+ rs.close();
+ st.close();
+ con.close();
+ %>
 						</table>
 						</div>
 					
