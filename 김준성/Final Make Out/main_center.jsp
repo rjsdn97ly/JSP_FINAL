@@ -13,7 +13,7 @@ img {display:block; margin: 0px auto; width: 700px; height: 450px;}
 </style>
 </head>
 <body>
- 
+
 
 
 <!--이미지 넣기 -->
