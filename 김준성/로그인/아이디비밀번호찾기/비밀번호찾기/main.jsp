@@ -51,7 +51,7 @@ footer {
 	
 
 	<main role="main" id="center">
-		<jsp:include page="login2.jsp"></jsp:include> <!-- 슬라이드 -->
+		<jsp:include page="FindPWmain.jsp"></jsp:include> <!-- 슬라이드 -->
 	</main>
 	
 

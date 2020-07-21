@@ -80,18 +80,18 @@
 	
 		
 			<h1 class="h3 my-5 font-weight-normal text-muted" style="text-align: center"
-				id="title">비밀번호 찾기</h1>
+				id="title">아이디 찾기</h1>
 				
 		 	<div class="border mb-4 pb-2 m-3">
 		<div class="container mt-2 d-flex ">
 			<h3 class="p-2">이메일 인증</h3>
-			<div class="p-2 ml-auto"><button href="/아이디찾기/FindIDemail/main.jsp" class="btn btn-block" type="button" id="btn-signup"> 이동</button></div>
+			<div class="p-2 ml-auto"><button class="btn btn-block" type="button" id="btn-signup"" onclick="location.href='이메일인증/main.jsp' ">이동</button></div>
 			</div>
 			</div>
 				<div class="border mb-4 pb-2 m-3">
 			<div class="container mt-2 d-flex ">
 			<h3 class="p-2">휴대폰 인증</h3>
-			<div class="p-2 ml-auto"><button class="btn btn-block" type="button" id="btn-signup">이동</button></div>
+			<div class="p-2 ml-auto"><button class="btn btn-block" type="button" id="btn-signup" onclick="location.href='휴대폰인증/main.jsp' ">이동</button></div>
 			</div>
 			</div>
 			<div class="text-sm-center">
