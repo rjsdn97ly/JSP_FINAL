@@ -24,49 +24,57 @@
 	<div class="container text-center">
 
 		<br>
-		<h2 class="font-weight-bold">게시판 입니다</h2>
-
+		<h2 class="font-weight-bold">상품 후기 게시판</h2>
+		<!-------------------------------------------게시판 테이블----------------------------- -->
 		<table class="table table-hover">
 			<thead>
 				<tr>
 					<th>아이디</th>
 					<th>제목</th>
-					<th>내용</th>
 					<th>작성자</th>
 					<th>작성일</th>
 					<th>선택</th>
 				</tr>
 			</thead>
 
+			<!-------------------------------------------게시판 테이블 값----------------------------- -->
 			<tbody>
+
 
 				<%
 					board_DAO bDao = new board_DAO();
 
-				ArrayList<board_DTO> dtos = bDao.board_Select();
+				ArrayList<board_DTO> dtos = bDao.board_Select("후기");
 
 				for (int i = 0; i < dtos.size(); i++) {
 					board_DTO dto = dtos.get(i);
 				%>
 
-				<tr>
+				<tr onClick ="location.href='board_info.jsp?boardNum=<%=dto.getBoardNum()%>'">
+					<a >
 					<td><%=dto.getBoardNum()%></td>
 					<td><%=dto.getBoardSubject()%></td>
-					<td><%=dto.getBoardContent()%></td>
 					<td><%=dto.getBoardWrite()%></td>
 					<td><%=dto.getBoardRegDate()%></td>
 					<td>
 						<input type="checkbox" name="check" value="">
 					</td>
+					</a>
 				</tr>
 				<%
 					}
 				%>
 
-			</tbody>
 
+
+			</tbody>
+			<!-------------------------------------------/게시판 테이블 값----------------------------- -->
 		</table>
 
+		<!-------------------------------------------/게시판 테이블----------------------------- -->
+
+
+		<!-------------------------------------------게시판 페이지 이동----------------------------- -->
 		<div class="text-center position-relative">
 			<div class="d-flex justify-content-start d-inline float-left">
 				<ul class="pagination">
@@ -93,9 +101,9 @@
 					</li>
 				</ul>
 			</div>
-
+			<!-------------------------------------------/게시판 페이지 이동----------------------------- -->
 			<div class="d-flex justify-content-end d-inline float-right">
-
+				<!-------------------------------------------게시글 작성----------------------------- -->
 				<a class="btn btn-outline-dark mx-1" href="insertPost.jsp">게시글 등록</a>
 
 			</div>
