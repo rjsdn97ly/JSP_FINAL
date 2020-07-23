@@ -17,17 +17,14 @@
 	-ms-user-select: none;
 	user-select: none;
 }
-
 @media ( min-width : 768px) {
 	.bd-placeholder-img-lg {
 		font-size: 3.5rem;
 	}
 }
-
 body {
 	margin: 10px;
 }
-
 .where {
 	display: block;
 	margin: 25px 15px;
@@ -37,7 +34,6 @@ body {
 	font-family: verdana;
 	font-style: italic;
 }
-
 .filebox input[type="file"] {
 	position: absolute;
 	width: 1px;
@@ -48,7 +44,6 @@ body {
 	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
-
 .filebox label {
 	display: inline-block;
 	padding: .5em .75em;
@@ -62,7 +57,6 @@ body {
 	border-bottom-color: #e2e2e2;
 	border-radius: .25em;
 }
-
 /* named upload */
 .filebox .upload-name {
 	display: inline-block;
@@ -79,12 +73,10 @@ body {
 	-moz-appearance: none;
 	appearance: none;
 }
-
 /* imaged preview */
 .filebox .upload-display {
 	margin-bottom: 5px;
 }
-
 @media ( min-width : 768px) {
 	.filebox .upload-display {
 		display: inline-block;
@@ -92,7 +84,6 @@ body {
 		margin-bottom: 0;
 	}
 }
-
 .filebox .upload-thumb-wrap {
 	display: inline-block;
 	width: 54px;
@@ -102,14 +93,12 @@ body {
 	border-radius: 5px;
 	background-color: #fff;
 }
-
 .filebox .upload-display img {
 	display: block;
 	max-width: 100%;
 	width: 100% \9;
 	height: auto;
 }
-
 .filebox.bs3-primary label {
 	color: #fff;
 	background-color: #337ab7;
@@ -127,7 +116,7 @@ body {
 <body class="">
 
 	<header id="top">
-		<jsp:include page="topBar.jsp"></jsp:include>
+		<jsp:include page="topbar2.jsp"></jsp:include>
 	</header>
 	<!-- -------------------------------------회원가입 컨테이너--------------------------------------------------- -->
 	<div class="container-lg">
@@ -183,7 +172,7 @@ body {
 
 					</div>
 					<!-- ----------------------------------------------버튼------------------------------------------------------------ -->
-				
+
 			</div>
 			<div class="col-md-6 order-md-1">
 				<form class="needs-validation" novalidate="">
@@ -196,9 +185,7 @@ body {
 					</div>
 					<div class="mb-3">
 					</div>
-
 					<!-- -----------------------------------------------이름----------------------------------------------------------- -->
-
 					
 					<!-- ----------------------------------------------버튼------------------------------------------------------------ -->
 				</form>
@@ -206,7 +193,6 @@ body {
 			
 				
 		</div>
-
 	<div class="text-center mt-3 p-5">
 				<input class="btn btn-outline-dark mt-3" type="submit" value="작성">
 				<input class="btn btn-outline-dark mt-3" type="reset" value="취소">
@@ -236,4 +222,4 @@ body {
 		integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 		crossorigin="anonymous"></script>
 </body>
-</html>
+</html> 
