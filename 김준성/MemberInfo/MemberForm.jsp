@@ -35,11 +35,6 @@
 	padding-top: 10%;
 }
 
-.big-page-nav, .row {
-	padding-top: 2%;
-	float: left;
-}
-
 .side-dropdown-menu {
 	/* position: absolute; */
 	height: 999px;
@@ -148,9 +143,9 @@ margin-top: 30px;}
 				</h6>
 		<!-- 사이드 메뉴 상단 끝 -->
 
-				<a class="dropdown-item" href="/JSPProject/Finish/마이페이지/주문내역/main.jsp">주문 내역</a> 
-				<a class="dropdown-item" href="/JSPProject/Finish/마이페이지/최근 본 상품/main.jsp">최근 본 상품</a> 
-				<a class="dropdown-item" href="/JSPProject/Finish/상품후기/main.jsp">상품 후기</a> 
+				<a class="dropdown-item" href="#">주문 내역</a> 
+				<a class="dropdown-item" href="#">최근 본 상품</a> 
+				<a class="dropdown-item" href="#">상품 후기</a> 
 				<a class="dropdown-item" href="#">Another action</a> 
 				<br></br> <!-- 간격 -->
 				
@@ -158,7 +153,7 @@ margin-top: 30px;}
 				 <!-- 구분선 -->
 				
 				<br></br> <!-- 간격 -->
-				<a class="dropdown-item" href="#">1:1문의</a> 
+				<a class="dropdown-item" href="#">문의게시판</a> 
 				<a class="dropdown-item" href="#">둥근해가</a> 
 				<a class="dropdown-item" href="#">떡섭니다</a> 
 				<a class="dropdown-item" href="#">Another action</a>
@@ -186,7 +181,7 @@ margin-top: 30px;}
 					<tbody>
 						<tr>
 							<th scope="row">이름</th>
-							<td colspan="2">김준성</td>
+							<td colspan="3">김준성</td>
 						</tr>
 						<tr>
 							<th scope="row">아이디</th>
@@ -220,15 +215,45 @@ margin-top: 30px;}
 				</table>
 <!-- -------------------------------------정보수정 버튼---------------------------------------- -->
 	<div class="text-center">
-	<p><button type="button" class="btn btn-outline-dark btn-block">정보 수정</button></p>
-			<!-- 하단 버튼 끝  -->
+	<p><button type="button" class="btn btn-outline-dark btn-block" href="#">정보 수정</button></p>
+			
+		<p><button href="#myModal" class="btn btn-outline-dark btn-block btn-settings" data-backdrop="false" data-toggle="modal">회원 탈퇴</button></p>
 	</div>
 <!-- -------------------------------------/정보수정 버튼---------------------------------------- -->
 		</div>
 <!--------------------------------- /회원정보 컨테이너  ---------------------------------->
 
 		</div>
-<!-- 전체 div 끝-->
+<!-- -------------------------------회원 탈퇴 모달창(팝업)------------------------------- -->
+		<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+            </div>
+            <div class="modal-body text-center">
+                <h3>회원 탈퇴</h3>
+                <p>정말로 진행하시겠습니까?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-outline-dark" data-dismiss="modal">No</button>
+                <button id="loadpage" type="button" class="btn btn-default btn-outline-dark">Yes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!------------------------------------------------------------- /.modal ------------------------------------------->
+<!-- ------------------------------- 모달 스크립트(팝업)------------------------------- -->
+<script type="text/javascript">
+$("#myModal").draggable({
+    handle: ".modal-header"
+});
+</script>
+<!-- ------------------------------- /모달 스크립트(팝업)------------------------------- -->
+
 </body>
 
 </body>
